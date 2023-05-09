@@ -1,3 +1,5 @@
+import { TopBar } from '@/components/topBar'
+import { SearchBar } from '@/components/topBar/searchBar'
 import Head from 'next/head'
 export default function Home() {
   return (
@@ -5,8 +7,7 @@ export default function Home() {
       <Head>
         <title>꾹담</title>
       </Head>
-      <main>
-      </main>
+      <TopBar/>
     </>
   )
 }
