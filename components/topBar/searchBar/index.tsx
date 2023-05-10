@@ -1,5 +1,5 @@
 import { BarBox, Container, GlassesWrapper } from "./searchBar.style"
-import Glasses from '@/public/img/glasses.png'
+import Glasses from '@/public/img/topBar/glasses.png'
 import Image from "next/image";
 export const SearchBar = () =>{
   return(

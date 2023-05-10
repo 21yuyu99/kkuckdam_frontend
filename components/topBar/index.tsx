@@ -1,20 +1,20 @@
 import { SearchBar } from "./searchBar"
-import { Container, IconContainer, LogoWrapper} from "./topBar.style"
+import { MainTopBarContainer, MainIconContainer, LogoWrapper} from "./topBar.style"
 import Image from 'next/image';
-import Logo from '@/public/img/logo.png'
-import Alarm from '@/public/img/alarm.png'
-import MenuBar from '@/public/img/menuBar.png'
-export const TopBar = () =>{
+import Logo from '@/public/img/topBar/logo.png'
+import Alarm from '@/public/img/topBar/alarm.png'
+import MenuBar from '@/public/img/topBar/menuBar.png'
+export const MainTopBar = () =>{
   return(
-    <Container>
+    <MainTopBarContainer>
       <LogoWrapper>
       <Image src={Logo} alt="꾹담" width={36}/>
       </LogoWrapper>
       <SearchBar/>
-      <IconContainer>
+      <MainIconContainer>
         <Image src={Alarm} alt="알람" width={18.6}/>
         <Image src={MenuBar} alt="메뉴" height={15}/>
-      </IconContainer>
-    </Container>
+      </MainIconContainer>
+    </MainTopBarContainer>
   )
 }

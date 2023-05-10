@@ -1,16 +1,16 @@
 import styled from "styled-components";
-export const Container = styled.header`
+export const MainTopBarContainer = styled.header`
   display:flex;
   align-items:center;
   height:10%;
+  padding:5% 0;
 `
 export const LogoWrapper = styled.div `
   width:15%;
   text-align:center;
 `
-export const IconContainer = styled.div`
+export const MainIconContainer = styled.div`
   width:20%;
-  //text-align:center;
   display:flex;
   justify-content:space-evenly;
   align-items:center;
