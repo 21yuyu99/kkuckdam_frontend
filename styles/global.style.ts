@@ -13,7 +13,8 @@ const GlobalStyle = createGlobalStyle`
     width:100%;
     height:100%;
     max-width: 767px;
-    font-size:16px;
+    font-size:16px; //최소 font 사이즈(12pt)
+    margin : auto;
   }
   a {
     color: inherit;
