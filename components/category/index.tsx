@@ -3,6 +3,7 @@ import Continue from "@/public/img/category/continue.png";
 import SelfImprovement from "@/public/img/category/selfImprovement.png";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
+import { useSelector } from 'react-redux';
 export const Category = () =>{
   const itemList = [
     {
