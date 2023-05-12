@@ -1,3 +1,4 @@
+import { pretendard } from "@/styles/global.style";
 import styled from "styled-components";
 export const Container = styled.div`
 display:flex;
@@ -17,6 +18,7 @@ border : none;
 }
 &::placeholder{
   color:#878787;
+  ${pretendard.style}
 }
 `
 export const GlassesWrapper = styled.div`

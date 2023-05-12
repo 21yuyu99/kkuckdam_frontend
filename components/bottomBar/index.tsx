@@ -7,15 +7,15 @@ export const BottomBar = () =>{
   return(
     <BarContainer>
       <MenuContainer>
-        <Image src={home} alt="" width={24} height={12}/>
+        <Image src={home} alt="" width={24} height={24}/>
         홈
       </MenuContainer>
       <MenuContainer>
-        <Image src={library} alt="" width={24} height={12}/>
+        <Image src={library} alt="" width={24} height={24}/>
         나만의 서재
       </MenuContainer>
       <MenuContainer>
-        <Image src={profile} alt="" width={24} height={12}/>
+        <Image src={profile} alt="" width={24} height={24}/>
         프로필
       </MenuContainer>
     </BarContainer>
