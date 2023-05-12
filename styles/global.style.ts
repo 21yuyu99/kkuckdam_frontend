@@ -18,12 +18,16 @@ const GlobalStyle = createGlobalStyle`
     max-width: 767px;
     font-size:16px; //최소 font 사이즈(12pt)
     margin : auto;
-    ${pretendard.style}
-    
+    ${pretendard.style};
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
     }
   a {
     color: inherit;
     text-decoration: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 `
 export default GlobalStyle;
