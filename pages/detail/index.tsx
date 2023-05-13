@@ -1,4 +1,4 @@
-import { BookImgBox, BookInfoBox } from "@/components/detail";
+import { BookHashTag, BookImgBox, BookInfoBox, Summary } from "@/components/detail";
 import { DetailTopBar } from "@/components/topBar";
 
 export default function Detail(){
@@ -7,6 +7,8 @@ export default function Detail(){
         <DetailTopBar/>
         <BookImgBox/>
         <BookInfoBox/>
+        <BookHashTag/>
+        <Summary/>
         </>
     )
 }
