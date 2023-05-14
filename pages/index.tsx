@@ -1,9 +1,8 @@
 import { MainBanner } from '@/components/banner'
 import { BottomBar } from '@/components/bottomBar'
 import { Category } from '@/components/category'
-import { ForYouBook, Recommend } from '@/components/recommend'
+import { Recommend } from '@/components/recommend'
 import { MainTopBar } from '@/components/topBar'
-import { SearchBar } from '@/components/topBar/searchBar'
 import { Main } from '@/styles/home.style'
 import Head from 'next/head'
 import { useEffect } from 'react'
@@ -26,8 +25,8 @@ export default function Home() {
         <MainBanner/>
         <Category/>
         <Recommend/>
-        <BottomBar/>
       </Main>
+      <BottomBar/>
     </>
   )
 }

@@ -4,6 +4,14 @@ display:flex;
 justify-content:space-around;
 height:10%;
 align-items:center;
+padding:5% 0;
+position: fixed;
+bottom:0;
+left:0;
+right:0;
+background-color:white;
+max-width:767px;
+margin:auto;
 `
 
 export const MenuContainer = styled.div`

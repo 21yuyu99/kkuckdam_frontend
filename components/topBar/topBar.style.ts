@@ -15,3 +15,8 @@ export const MainIconContainer = styled.div`
   justify-content:space-evenly;
   align-items:center;
 `
+export const DetailTopBarContainer = styled.div`
+  display:flex;
+  justify-content:space-between;
+  padding : 5%;
+`

@@ -1,5 +1,5 @@
 import { Title } from "../category/category.style"
-import { ListContainer } from "./recommend.style"
+import { ListContainer, RecommendContainer } from "./recommend.style"
 import BearMarket from "@/public/img/book/bearMarket.png"
 import UltraProfit from "@/public/img/book/ultra-profit.png"
 import NatureOfMoney from "@/public/img/book/natureOfMoney.png"
@@ -12,10 +12,10 @@ import Leverage from "@/public/img/book/leverage.png"
 import Image from "next/image"
 export const Recommend = () =>{
   return(
-    <>
+    <RecommendContainer>
     <ForYouBook/>
     <PopularBook/>
-    </>
+    </RecommendContainer>
   )
 }
 export const ForYouBook = () =>{
