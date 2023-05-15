@@ -1,9 +1,9 @@
 
 import { BookInfoContainer, BookInfo, Bookname,ThumbContainer,DetailContainer,Writer,Timer } from "./result.style"
 import Image from 'next/image';
-import Selfmanage from '@/public/img/_selfManagement.png'
-import Star from "@/public/img/star.png"
-import Mark from "@/public/img/mark.png"
+import Selfmanage from '@/public/img/result/_selfManagement.png'
+import Star from "@/public/img/result/star.png"
+import Mark from "@/public/img/result/mark.png"
 
 export const Result = () =>{
     return(
