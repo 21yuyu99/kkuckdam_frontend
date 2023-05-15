@@ -1,23 +1,12 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
-import { testSlice } from './test';
+import { heart } from './test';
+import { readSummary } from './detail';
+
 export const store = configureStore({
   reducer: {
-  },
-})
-const initialState = {
-  name: '아이유', // state 초기값
-};
-
-const personSlice = createSlice({
-  name: 'person',
-  initialState,
-  reducers: {
-    
+    heart : heart.reducer,
+    readSummary : readSummary.reducer,
   },
 });
-export default configureStore({
-  reducer: {
-    person: personSlice.reducer,
-    test: testSlice.reducer,
-  },
-});
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch

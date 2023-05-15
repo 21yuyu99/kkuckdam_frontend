@@ -3,18 +3,17 @@ import { BottomBar } from '@/components/bottomBar'
 import { Category } from '@/components/category'
 import { Recommend } from '@/components/recommend'
 import { MainTopBar } from '@/components/topBar'
+// import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { Main } from '@/styles/home.style'
 import Head from 'next/head'
-import { useEffect } from 'react'
-import { useSelector } from 'react-redux';
+// import { addHeartColor} from '@/store/test'
 
 export default function Home() {
-//   const test = useSelector((state) => {
-//     return state.test;
-//  });
-// useEffect(()=>{
-//   console.log(test);
-// });
+  // const heart = useAppSelector((state) =>state.heart);
+  // const dispatch = useAppDispatch();
+  // const onClick = ()=>{
+  //   dispatch(addHeartColor());
+  // }
   return (
     <>
       <Head>

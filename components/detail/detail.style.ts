@@ -85,7 +85,8 @@ text-align:center;
     margin : 5px;
 }
 `
-export const SummaryContainer = styled.div`
+export const SummaryContainer = styled.div<{open:boolean}>`
+${props=>props.open?`;`:`height:10%;`}
 display:flex;
 width:90%;
 justify-content:space-around;
@@ -98,6 +99,7 @@ export const SummaryTitle = styled.p`
 export const SummaryContent = styled.div`
     width:70%;
     font-weight:400;
+    overflow:hidden;
 `
 export const SummaryFullBtn = styled.div`
     width : 10%;
