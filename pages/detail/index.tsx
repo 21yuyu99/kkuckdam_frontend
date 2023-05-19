@@ -4,32 +4,42 @@ import { DetailTopBar } from "@/components/topBar";
 import textbook from "@/public/img/detail/textbook.png"
 import livebook from "@/public/img/detail/livebook.png"
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { ForItemGap, ReadIconContainer } from "@/styles/detail.style";
 export default function Detail(){
+    const router = useRouter();
     return(
         <>
         <DetailTopBar/>
-        <BookImgBox/>
+        <BookImgBox id={router.query.id as string}/>
         <BookInfoBox/>
         <BookHashTag/>
         <Summary/>
-        <ListContainer>
-            <ItemContainer>
-                <IconWrapper color="yellow">
-                    <Image src={textbook} alt=""/>
-                </IconWrapper>
-                <ItemTitle>
-                    텍스트북
-                </ItemTitle>
-            </ItemContainer>
-            <ItemContainer>
-                <IconWrapper color="yellow">
-                    <Image src={livebook} alt=""/>
-                </IconWrapper>
-                <ItemTitle>
-                    라이브북
-                </ItemTitle>
-            </ItemContainer>
-        </ListContainer>
+        <ForItemGap>
+            <ListContainer>
+                <ItemContainer>
+                    <ReadIconContainer>
+                        <IconWrapper color="yellow">
+                            <Image src={textbook} alt=""/>
+                        </IconWrapper>
+                    </ReadIconContainer>
+                    <ItemTitle>
+                        텍스트북
+                    </ItemTitle>
+                </ItemContainer>
+                
+                <ItemContainer>
+                    <ReadIconContainer>
+                        <IconWrapper color="yellow">
+                            <Image src={livebook} alt=""/>
+                        </IconWrapper>
+                    </ReadIconContainer>
+                    <ItemTitle>
+                        라이브북
+                    </ItemTitle>
+                </ItemContainer>
+            </ListContainer>
+        </ForItemGap>
         </>
     )
 }

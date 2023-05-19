@@ -8,7 +8,8 @@ import down from "@/public/img/detail/down.png"
 import { BookContainer,BookWrapper, BackWrapper, BookInfoContainer, BookTitle, Tag, BookWriter, IconWrapper, InfoLeftContainer, ReadingTime, InfoRightContaienr, ReadingInfoContainer, HashTagContainer, SummaryContainer, SummaryTitle, SummaryContent, SummaryFullBtn} from "./detail.style"
 import { changeSummaryState } from "@/store/detail"
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
-export const BookImgBox = () => {
+import { BookIndexContainer } from "@/styles/detail.style"
+export const BookImgBox = (id:{id:string}) => {
     return(
         <BookContainer>
             <BackWrapper>
@@ -84,5 +85,12 @@ export const Summary = () =>{
                 {summaryState==false?<Image src={down} alt="자세히 보기" width={20} height={13}/>:<Image src={up} alt="닫기" width={20} height={13}/>}
             </SummaryFullBtn>
         </SummaryContainer>
+    )
+}
+export const BookIndex = () =>{
+    return(
+        <BookIndexContainer>
+            
+        </BookIndexContainer>
     )
 }
