@@ -5,7 +5,7 @@ import UltraProfit from "@/public/img/book/ultra-profit.png"
 import NatureOfMoney from "@/public/img/book/natureOfMoney.png"
 import SelfManagement from "@/public/img/book/selfManagement.png"
 import RichFriend from "@/public/img/book/richFriend.png"
-import RichDad from "@/public/img/book/richDad.png"
+import market from "@/public/img/book/market.png"
 import TrendKorea from "@/public/img/book/treanKorea.png"
 import EconomicRecipe from "@/public/img/book/economicRecipe.png"
 import Leverage from "@/public/img/book/leverage.png"
@@ -63,7 +63,7 @@ export const PopularBook = () =>{
       <Image src={BearMarket} alt = "베어마켓" width={104} height={160}/>  
       <Image src={EconomicRecipe} alt = "장하준의 경제학 레시피" width={104} height={160}/>  
       <Image src={Leverage} alt = "레버리지" width={104} height={160}/>  
-      <Image src={RichDad} alt="부자 아빠" width={104} height={160}/>
+      <Image src={market} alt="시장학개론" width={104} height={160}/>
     </ListContainer>
     </PopularBookContainer>
     </>
