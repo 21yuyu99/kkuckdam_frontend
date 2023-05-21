@@ -1,5 +1,5 @@
 import { Main } from '@/styles/home.style'
-import { KkukBanner } from '@/components/library'
+import { KkukBanner } from '@/components/kkuk'
 import Head from 'next/head'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux';
@@ -11,6 +11,7 @@ export default function library() {
         <title>꾹담</title>
       </Head>
       <Main>
+        
         <KkukBanner/>
       </Main>
     </>
