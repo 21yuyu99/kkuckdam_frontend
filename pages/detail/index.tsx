@@ -17,7 +17,7 @@ export default function Detail(){
         <Summary/>
         <ForItemGap>
             <ListContainer>
-                <ItemContainer>
+                <ItemContainer onClick={()=>{}}>
                     <ReadIconContainer>
                         <IconWrapper color="yellow">
                             <Image src={textbook} alt=""/>

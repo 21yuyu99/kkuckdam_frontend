@@ -317,7 +317,7 @@ export const BookIndex = () => {
                             {index.open==false?<></>:<>{
                                 index.content.map(
                                     detail=>
-                                    <DetailIndexContainer>
+                                    <DetailIndexContainer key={index.content.indexOf(detail)}>
                                         <DetailIndexLeftWrapper/>
                                         <DetailIndexWrapper>{detail.num}&nbsp;&nbsp;{detail.content}</DetailIndexWrapper>
                                         <DetailIndexRightWrapper/>
