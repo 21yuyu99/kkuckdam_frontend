@@ -1,7 +1,14 @@
 import styled from "styled-components"
-export const BookshelfContainer = styled.div`
+
+
+// export const ReviewList = styled.div`
+//   position: relative;
+//   top : 10px;
+
+  
+// `
+export const BookshelfFrame = styled.div`
   display : flex;
-  margin-top : 100px;
   margin-left : 14px;
 
   
