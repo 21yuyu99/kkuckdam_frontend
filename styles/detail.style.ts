@@ -14,7 +14,6 @@ export const ForItemGap = styled.div`
         margin:0 30px;
     }
 `
-
-export const BookIndexContainer = styled.div`
-margin:15px 0;
+export const BookIndexWrapper = styled.div`
+padding-bottom: 40px;
 `

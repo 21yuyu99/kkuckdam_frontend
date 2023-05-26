@@ -1,11 +1,11 @@
 import { IconWrapper, ItemContainer, ItemTitle, ListContainer } from "@/components/category/category.style";
-import { BookHashTag, BookImgBox, BookInfoBox,Summary } from "@/components/detail";
+import { BookHashTag, BookImgBox, BookIndex, BookInfoBox,Summary } from "@/components/detail";
 import { DetailTopBar } from "@/components/topBar";
 import textbook from "@/public/img/detail/textbook.png"
 import livebook from "@/public/img/detail/livebook.png"
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { ForItemGap, ReadIconContainer } from "@/styles/detail.style";
+import { BookIndexWrapper, ForItemGap, ReadIconContainer } from "@/styles/detail.style";
 export default function Detail(){
     const router = useRouter();
     return(
@@ -40,6 +40,9 @@ export default function Detail(){
                 </ItemContainer>
             </ListContainer>
         </ForItemGap>
+        <BookIndexWrapper>
+            <BookIndex/>
+        </BookIndexWrapper>
         </>
     )
 }

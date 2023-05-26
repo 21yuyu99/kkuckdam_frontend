@@ -105,3 +105,48 @@ export const SummaryFullBtn = styled.div`
     width : 10%;
     text-align:center;
 `
+export const BookIndexContainer = styled.div`
+display:flex;
+align-items:center;
+margin:25px 10px 15px 10px;
+`
+export const GrayLine = styled.div`
+margin:15px 0;
+height: 2px;
+width: 100%;
+background: #E0E0E0;
+`
+export const IndexNum = styled.span`
+border-left : 4px solid #F47873;
+padding-left: 8px;
+width: 17%;
+font-weight:600;
+font-size:1.2em;
+`
+export const IndexTitle = styled.span`
+width : 73%;
+font-weight:600;
+font-size:1.1em;
+`
+export const IndexBtnWrapper = styled.div`
+width : 10%;
+text-align:right;
+>img{
+    vertical-align:middle;
+}
+`
+export const DetailIndexWrapper = styled.div`
+padding:10px 0;
+border-bottom: 1px solid #E0E0E0;
+width : 69%;
+`
+export const DetailIndexContainer = styled.div`
+display:flex;
+margin:0 20px;
+`
+export const DetailIndexLeftWrapper = styled.div`
+width: 16%;
+`
+export const DetailIndexRightWrapper = styled.div`
+width : 15%;
+`
