@@ -3,11 +3,36 @@ import { BookHashTag, BookImgBox, BookIndex, BookInfoBox,Summary } from "@/compo
 import { DetailTopBar } from "@/components/topBar";
 import textbook from "@/public/img/detail/textbook.png"
 import livebook from "@/public/img/detail/livebook.png"
-import Image from "next/image";
 import { useRouter } from "next/router";
-import { BookIndexWrapper, ForItemGap, ReadIconContainer } from "@/styles/detail.style";
+import { BookIndexWrapper, ForItemGap, ReadIconContainer, VideoWrapper } from "@/styles/detail.style";
+import Image from "next/image";
 export default function Detail(){
     const router = useRouter();
+    const onClickLiveBook = () =>{
+        if (typeof(document) !=="undefined"){
+           let videoWrapper = document.getElementById("videoWrapper");
+           let video = document.getElementById("video");
+          if (videoWrapper instanceof Element){
+            videoWrapper.style.display = "block";
+          }
+          if (video instanceof Element){
+                video.requestFullscreen();
+            } 
+    }
+}
+    if(typeof(document) !=="undefined"){
+        document.addEventListener("fullscreenchange", () => {
+            if(!document.fullscreenElement){
+                let videoWrapper = document.getElementById("videoWrapper");
+                    if (videoWrapper instanceof Element){
+                        videoWrapper.style.display = "none";
+                        location.reload();
+                    } 
+                }                
+
+            }       
+        );  
+    }   
     return(
         <>
         <DetailTopBar/>
@@ -17,19 +42,18 @@ export default function Detail(){
         <Summary/>
         <ForItemGap>
             <ListContainer>
-                <ItemContainer onClick={()=>{}}>
-                    <ReadIconContainer>
-                        <IconWrapper color="yellow">
-                            <Image src={textbook} alt=""/>
-                        </IconWrapper>
-                    </ReadIconContainer>
-                    <ItemTitle>
-                        텍스트북
-                    </ItemTitle>
-                </ItemContainer>
-                
-                <ItemContainer>
-                    <ReadIconContainer>
+                    <ItemContainer>
+                        <ReadIconContainer img="textbook">
+                            <IconWrapper color="yellow">
+                                <Image src={textbook} alt=""/>
+                            </IconWrapper>
+                        </ReadIconContainer>
+                        <ItemTitle>
+                            텍스트북
+                        </ItemTitle>
+                    </ItemContainer>
+                <ItemContainer onClick = {()=>onClickLiveBook()}>
+                    <ReadIconContainer img = "livebook">
                         <IconWrapper color="yellow">
                             <Image src={livebook} alt=""/>
                         </IconWrapper>
@@ -43,6 +67,9 @@ export default function Detail(){
         <BookIndexWrapper>
             <BookIndex/>
         </BookIndexWrapper>
+        <VideoWrapper id="videoWrapper">
+         <video id = "video" src="/video/selfManagement.mp4" controls/>
+        </VideoWrapper>
         </>
     )
 }

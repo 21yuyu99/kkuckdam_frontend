@@ -303,11 +303,11 @@ export const BookIndex = () => {
         <>
         <GrayLine/>
         {
-            indexList.map(index=>
+            indexList.map((index,key)=>
                 {
                     return(
                             <>
-                            <BookIndexContainer key={indexList.indexOf(index)}>
+                            <BookIndexContainer key={key}>
                             <IndexNum>{index.num}</IndexNum>
                             <IndexTitle>{index.title}</IndexTitle>
                             <IndexBtnWrapper onClick={()=> onClickHandler(indexList.indexOf(index))}>
@@ -316,8 +316,8 @@ export const BookIndex = () => {
                             </BookIndexContainer>
                             {index.open==false?<></>:<>{
                                 index.content.map(
-                                    detail=>
-                                    <DetailIndexContainer key={index.content.indexOf(detail)}>
+                                    (detail,idx)=>
+                                    <DetailIndexContainer key={idx}>
                                         <DetailIndexLeftWrapper/>
                                         <DetailIndexWrapper>{detail.num}&nbsp;&nbsp;{detail.content}</DetailIndexWrapper>
                                         <DetailIndexRightWrapper/>
