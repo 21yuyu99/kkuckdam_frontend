@@ -11,5 +11,4 @@ export const BookshelfFrame = styled.div`
   display : flex;
   margin-left : 14px;
 
-  
 `
