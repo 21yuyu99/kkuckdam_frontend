@@ -1,4 +1,4 @@
-import { Container, Title, KkukkkukContainer, TextContainer, IconWrapper, NormalText, UnderlinedText, InformText, TopContainer, CharacterWrapper, InformIconWrapper } from "./kkuk.style"
+import { Container, Title, KkukkkukContainer, TextContainer, IconWrapper, NormalText, UnderlinedText, InformText, TopContainer, CharacterWrapper, InformIconWrapper, MainText } from "./kkuk.style"
 import Image from "next/image";
 import babyKkuck from "@/public/img/library/character/babyKkuck.png";
 import informIcon from "@/public/img/library/informicon.png";
@@ -12,9 +12,9 @@ export const KkukBanner = () => {
                 </CharacterWrapper>
                 <TextContainer>
                     <TopContainer>
-                        <NormalText>현재 당신은&nbsp;</NormalText>
-                        <UnderlinedText>아기 꾹꾹이</UnderlinedText>
-                        <NormalText>에요</NormalText>
+                        <MainText underline={false}>현재 당신은&nbsp;</MainText>
+                        <MainText underline={true}>아기 꾹꾹이</MainText>
+                        <MainText underline={false}>에요</MainText>
                         <InformIconWrapper>
                             <Image src={informIcon} alt="꾹꾹이 설명서" width={20} height={20}/>
                         </InformIconWrapper>

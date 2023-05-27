@@ -16,6 +16,9 @@ export const Title = styled.h2`
   width:92%;
   font-family:Gmarket Sans;
   font-weight:600;
+  @media(min-width:600px){
+    font-size:1.5em;
+  }
 `
 export const KkukkkukContainer = styled.div`
   margin:auto;
@@ -25,7 +28,6 @@ export const KkukkkukContainer = styled.div`
   background-color: #FDF0D4;
   align-items:center;
   padding : 15px; 
-  max-width:455px;
   @media(max-width:345px){
     width:100%;
   }
@@ -35,26 +37,28 @@ font-family:Gmarket Sans;
 width:85%;
 padding-left:15px;
 white-space:nowrap;
+@media(min-width:600px){
+  width:80%;
+  padding-left:15%;
+}
 `
-export const NormalText = styled.p`
+export const MainText = styled.p<{underline:boolean}>`
   font-size:1.2em;
   color: #6D5A2F;
   display:inline;
   @media(max-width:345px){
     font-size:1em;
   }
-`
-export const UnderlinedText = styled.p`
-  font-size:1.2em;
-  color: #6D5A2F;
-  display:inline;
-  text-decoration:underline;
-  @media(max-width:345px){
-    font-size:1em;
+  @media(min-width:600px){
+    font-size:1.4em;
   }
+  ${props=>props.underline == true?`text-decoration:underline;`:``}
 `
 export const InformText = styled.p`
   color: #6D5A2F;
+  @media(min-width:600px){
+    font-size:1.2em;
+  }
 `
 export const TopContainer = styled.div`
 display:flex;
@@ -63,6 +67,14 @@ font-weight:700;
 export const CharacterWrapper = styled.div`
 width:15%;
 text-align:center;
+@media(min-width:600px){
+  width:20%;
+  padding-left:12%;
+  >img{
+    width:60px;
+    height:55px;
+  }
+}
 `
 export const InformIconWrapper = styled.div`
 padding-left:5px;
