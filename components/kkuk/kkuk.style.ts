@@ -10,50 +10,64 @@ import styled from "styled-components"
 export const Container = styled.div`
 `
 export const Title = styled.h2`
-  font-size:1.6rem;
-  margin:15px;
-  position:relative;
-  font-family:Gmarket Sans
+  font-size:1.3em;
+  margin:15px auto;
+  padding-left:5px;
+  width:92%;
+  font-family:Gmarket Sans;
+  font-weight:600;
 `
 export const KkukkkukContainer = styled.div`
   margin:auto;
+  width:92%;
   display:flex;
   border-radius:13px;
-  position:relative;
   background-color: #FDF0D4;
-
-  width:92%;
+  align-items:center;
+  padding : 15px; 
+  max-width:455px;
+  @media(max-width:345px){
+    width:100%;
+  }
 `
 export const TextContainer = styled.div`
-  padding-top:6%;
-`
-export const IconWrapper = styled.div`
-
-  width:12%;
-  padding-top:6%;
-  padding-left:3%;
-  border-radius:0 13px 13px 0;
+font-family:Gmarket Sans;
+width:85%;
+padding-left:15px;
+white-space:nowrap;
 `
 export const NormalText = styled.p`
-
-  font-size:1rem;
+  font-size:1.2em;
   color: #6D5A2F;
   display:inline;
-  font-family:Gmarket Sans;
-  font-weight:800;
+  @media(max-width:345px){
+    font-size:1em;
+  }
 `
 export const UnderlinedText = styled.p`
-  
-  font-size:1rem;
+  font-size:1.2em;
   color: #6D5A2F;
   display:inline;
   text-decoration:underline;
-  font-family:Gmarket Sans;
-  font-weight:800;
+  @media(max-width:345px){
+    font-size:1em;
+  }
 `
 export const InformText = styled.p`
-
-  font-size:0.8rem;
   color: #6D5A2F;
-  font-family:Gmarket Sans;
+`
+export const TopContainer = styled.div`
+display:flex;
+font-weight:700;
+`
+export const CharacterWrapper = styled.div`
+width:15%;
+text-align:center;
+`
+export const InformIconWrapper = styled.div`
+padding-left:5px;
+@media(max-width:345px){
+    width:50%;
+    height:50%;
+}
 `
