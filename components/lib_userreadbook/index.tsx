@@ -12,16 +12,23 @@ export const UserReadBookList = () => {
         <ReadbookList>
             <Image src={Down} alt="내리기" width={29} height={29} />
             <span className="text-style">김민재짱짱 님이 읽은 라이브북</span>
-            
             <ReadList>
+            <div>
             <Image src={UltraProfit} alt = "초수익 성장주 투자" width={100} height={153}/>
             <span className ="write-style">서평작성</span>
+            </div>
+            <div>
             <Image src={BearMarket} alt = "베어마켓" width={100} height={153}/>  
             <span className ="write-style">서평작성</span>
+            </div>
+            <div>
             <Image src={SelfManagement} alt = "자기관리론" width={100} height={153}/>
             <span className ="write-style">서평작성</span>
+            </div>
+            <div>
             <Image src={MarketOverview} alt = "시장학개론" width={100} height={153}/>
             <span className ="write-style">서평작성</span>
+            </div>
             </ReadList>
             
             
