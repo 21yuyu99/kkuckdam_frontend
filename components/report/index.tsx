@@ -1,7 +1,7 @@
 
 import {ReportContainer,Bubble, Answer, Bubble2, Bubble3, Kkuksay, User_name, Num_book, Time_book, User_interest} from "./report.style"
 import Image from 'next/image';
-import kkuk from '@/public/img/library/kkuk.png';
+import kkuk from '@/public/img/library/character/babyKkuck.png';
 
 export const Report = () => {
     return (
