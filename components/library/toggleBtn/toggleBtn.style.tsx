@@ -17,11 +17,8 @@ export const ToggleContainer = styled.div`
         border-radius:13px;
     }
 `
-
-export const LibraryWrapper = styled.div`
-    background-color:${props=>props.theme.colors.yellow};
-`
-export const ReportWrapper = styled.div`
+export const BtnWrapper = styled.div<{selected:boolean}>`
+${props=>props.selected == true?`background-color:${props.theme.colors.yellow};`:``};
 `
 export const LibraryContainer = styled.div`
     margin-bottom : 100px;
