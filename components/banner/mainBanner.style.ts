@@ -1,13 +1,19 @@
 import styled from "styled-components"
 export const Container = styled.div`  
-  width:100%;
   padding-left:15px;
   margin:auto;
   position:relative;
-  >img{
-    height:100%;
+  div>img{
     width:100%;
+    height:100%;
+    padding-right:15px;
   }
+`
+export const BannerWrapper = styled.div`
+white-space:nowrap;
+transition: .3s ease-out;
+width:100%;
+height:100%;
 `
 export const PaginationContainer = styled.div`
 width:95%;
