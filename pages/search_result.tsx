@@ -17,7 +17,6 @@ export default function search_result() {
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
 
         <Result/>
-        <Result/>
         </div>
       </Main>
     </>
