@@ -11,7 +11,7 @@ import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { Report } from '@/components/library/report'
 import { changeBottomState } from '@/store/bottomBar'
 
-export default function library() {
+export default function Library() {
   const toggleState:string = useAppSelector((state)=>state.toggleState);
   const dispatch = useAppDispatch();
    dispatch(changeBottomState("library"));
