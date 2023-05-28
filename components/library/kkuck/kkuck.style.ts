@@ -10,15 +10,12 @@ import styled from "styled-components"
 export const Container = styled.div`
 `
 export const Title = styled.h2`
-  font-size:1.3em;
+  font-size:1.6em;
   margin:15px auto;
   padding-left:5px;
   width:92%;
   font-family:Gmarket Sans;
-  font-weight:600;
-  @media(min-width:600px){
-    font-size:1.5em;
-  }
+  font-weight:500;
 `
 export const KkukkkukContainer = styled.div`
   margin:auto;

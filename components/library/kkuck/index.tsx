@@ -1,4 +1,4 @@
-import { Container, Title, KkukkkukContainer, TextContainer, InformText, TopContainer, CharacterWrapper, InformIconWrapper, MainText } from "./kkuk.style"
+import { Container, Title, KkukkkukContainer, TextContainer, InformText, TopContainer, CharacterWrapper, InformIconWrapper, MainText } from "./kkuck.style"
 import Image from "next/image";
 import babyKkuck from "@/public/img/library/character/babyKkuck.png";
 import informIcon from "@/public/img/library/informicon.png";
