@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const ReviewContainer = styled.div`
     width : 92%;
     margin:auto;
