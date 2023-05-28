@@ -8,7 +8,7 @@ import styled from "styled-components"
   
 // `
 export const BookshelfFrame = styled.div`
+  justify-content: center;
+  align-items : center;
   display : flex;
-  margin-left : 14px;
-
 `
