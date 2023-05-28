@@ -10,7 +10,7 @@ export const ListContainer = styled.div`
 display:flex;
 overflow : scroll;
 @media (min-width : 470px){
-  justify-content:center;
+  justify-content:space-around;
 }
 `
 export const ItemContainer = styled.div`
