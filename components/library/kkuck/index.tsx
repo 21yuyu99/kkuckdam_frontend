@@ -1,9 +1,8 @@
 import { Container, Title, KkukkkukContainer, TextContainer, InformText, TopContainer, CharacterWrapper, InformIconWrapper, MainText, Kkukbanner, TempContainer, BabyContainer, KkukContainer, AContainer, BContainer, LineContainer } from "./kkuck.style"
 import Image from "next/image";
-import babyKkuck from "@/public/img/library/character/babyKkuck.png";
 import informIcon from "@/public/img/library/informicon.png";
 import xbtn from "@/public/img/library/btn/x.png"
-import babykkuk from "@/public/img/library/character/babykkuck.png"
+import babykkuk from "@/public/img/library/character/babyKkuck.png"
 import secondkkuk from "@/public/img/library/character/2ndkkuk.png"
 import thirdkkuk from "@/public/img/library/character/3ndkkuk.png"
 import fourthkkuk from "@/public/img/library/character/4ndkkuk.png"
@@ -22,7 +21,7 @@ export const KkukBanner = () => {
             <Title>희선 님의 서재</Title>
             <KkukkkukContainer>
                 <CharacterWrapper>
-                <Image src={babyKkuck} width={45} alt=""/>
+                <Image src={babykkuk} width={45} alt=""/>
                 </CharacterWrapper>
                 <TextContainer>
                     <TopContainer>
