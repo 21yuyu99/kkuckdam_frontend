@@ -13,11 +13,11 @@ max-width:767px;
 margin:auto;
 `
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled.div<{color:string}>`
 display:flex;
 flex-direction:column;
 align-items:center;
-color:#8B8B8B;
+color:${props=>props.color};
 >img{
     padding-bottom:5px;
 }
