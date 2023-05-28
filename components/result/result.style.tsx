@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 
 export const DetailContainer = styled.div`
-    margin-left : -6px;
+    margin-left : 10px;
     margin-top : 5px;
     display : flex;
     flex-wrap: wrap;
-    padding-top : 100%;
 `
 
 export const ThumbContainer = styled.div `
