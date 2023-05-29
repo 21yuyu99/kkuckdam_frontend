@@ -10,7 +10,7 @@ import TrendKorea from "@/public/img/book/treanKorea.png"
 import EconomicRecipe from "@/public/img/book/economicRecipe.png"
 import Leverage from "@/public/img/book/leverage.png"
 import Image from "next/image"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 export const Recommend = () =>{
   return(
@@ -21,16 +21,39 @@ export const Recommend = () =>{
   )
 }
 export const ForYouBook = () =>{
-
+const [bookNum,setBookNum] = useState(3);
+const [count,setCount] = useState(1);
 useEffect(() => {
   // window.addEventListener("scroll", 
   // ()=>console.log(scrollY));
-    // let text = document.getElementById("book3");
-    // // let top1 = text?.getBoundingClientRect().left;
-    // // console.log(top1);
-    let test = document.getElementById("livebook");
-    // test?.addEventListener("scroll",()=>{console.log(test?.scrollLeft)});
-    test?.scrollTo((836- screen.availWidth)/2,0);
+    let prevBook = document.getElementById(`book${bookNum-1}`);
+    let book = document.getElementById(`book${bookNum}`);
+    let nextBook = document.getElementById(`book${bookNum+1}`);
+    // let top1 = text?.getBoundingClientRect().left;
+    // console.log(top1);
+    let bookContainer = document.getElementById("livebook");
+    bookContainer?.scrollTo((836- screen.availWidth)/2,0);
+    let currentScroll = (836- screen.availWidth)/2;
+    bookContainer?.addEventListener("scroll",()=>{
+      console.log(currentScroll);
+      if(bookContainer instanceof HTMLElement && book instanceof HTMLElement && nextBook instanceof HTMLElement && prevBook instanceof HTMLElement){
+        if(bookContainer.scrollLeft-currentScroll>=140){
+          nextBook.style.transition = "1s ease-out";
+          book.style.width = "143px";book.style.height="220px";
+          nextBook.style.width = "170px";nextBook.style.height="260px";
+          currentScroll = currentScroll+140;
+        }
+        // else if(bookContainer.scrollLeft-currentScroll<=140){
+        //   prevBook.style.transition = "1s ease-out";
+        //   book.style.width = "143px";book.style.height="220px";
+        //   prevBook.style.width = "170px";prevBook.style.height="260px";
+        //   currentScroll = currentScroll-140;
+        // }
+      }
+    });
+    // if(bookContainer instanceof HTMLElement){
+    //   bookContainer.style.marginLeft = `-${180*count}px`;
+    // }
     
 },[]);
 const router = useRouter();
@@ -46,9 +69,9 @@ const toDetailPage = (id:number)=>{
     <ListContainer id = "livebook">
       <Image id = "book1" src={SelfManagement} alt = "자기관리론" width={143} height={220} onClick={()=>toDetailPage(1)}/>
       <Image id = "book2" src={UltraProfit} alt = "초수익 성장주 투자" width={143} height={220}/>
-      <Image id = "book3" src={BearMarket} alt = "베어마켓" width={163.8} height={252}/>  
-      <Image src={NatureOfMoney} alt = "돈의 속성" width={143} height={220}/>
-      <Image src={RichFriend} alt = "나의 돈 많은 고등학교 친구" width={143} height={220}/>
+      <Image id = "book3" src={BearMarket} alt = "베어마켓" width={170} height={260}/>  
+      <Image id = "book4" src={NatureOfMoney} alt = "돈의 속성" width={143} height={220}/>
+      <Image id = "book5" src={RichFriend} alt = "나의 돈 많은 고등학교 친구" width={143} height={220}/>
     </ListContainer>
     </>
   )
