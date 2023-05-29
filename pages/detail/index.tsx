@@ -8,6 +8,7 @@ import { BookIndexWrapper, ForItemGap, ReadIconContainer, VideoWrapper } from "@
 import Image from "next/image";
 export default function Detail(){
     const router = useRouter();
+    const textbookRouter = useRouter();
     const onClickLiveBook = () =>{
         if (typeof(document) !=="undefined"){
            let videoWrapper = document.getElementById("videoWrapper");
@@ -20,6 +21,7 @@ export default function Detail(){
             } 
     }
 }
+    
     if(typeof(document) !=="undefined"){
         document.addEventListener("fullscreenchange", () => {
             if(!document.fullscreenElement){
@@ -32,7 +34,14 @@ export default function Detail(){
 
             }       
         );  
-    }   
+    }
+
+    const toTextbookPage = (id:number) => {
+        textbookRouter.push({
+            pathname : "./textbbbb",
+            query : {id : id}
+        })
+    }
     return(
         <>
         <DetailTopBar/>
@@ -42,7 +51,7 @@ export default function Detail(){
         <Summary/>
         <ForItemGap>
             <ListContainer>
-                    <ItemContainer>
+                    <ItemContainer onClick = {()=>toTextbookPage(Number(router.query.id) as number)}>
                         <ReadIconContainer img="textbook">
                             <IconWrapper color="yellow">
                                 <Image src={textbook} alt=""/>
