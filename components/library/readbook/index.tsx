@@ -34,8 +34,8 @@ export const UserReadBookList = () => {
             </TitleContainer>
             <ReadList>
                 {bookList.map(
-                    book=>
-                    <div>
+                    (book,index)=>
+                    <div key={(index)}>
                     <Image src={book.img} alt = {book.alt} width={100} height={153}/>
                     <span><Link href="/library/review">서평작성</Link></span>
                     </div>
