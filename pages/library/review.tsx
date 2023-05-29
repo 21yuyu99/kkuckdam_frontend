@@ -3,10 +3,8 @@ import { BottomBar } from '@/components/bottomBar'
 import { Review_TopBar, Book_Info, Text_Area } from '@/components/review'
 
 import Head from 'next/head'
-import { useEffect } from 'react'
-import { useSelector } from 'react-redux';
 
-export default function library() {
+export default function Review() {
     return (
       <>
         <Head>
