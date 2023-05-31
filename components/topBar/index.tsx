@@ -6,6 +6,7 @@ import Alarm from '@/public/img/topBar/alarm.png'
 import MenuBar from '@/public/img/topBar/menuBar.png'
 import back from '@/public/img/topBar/back.png'
 import bookmark from '@/public/img/topBar/bookmark.png'
+import Link from "next/link";
 export const MainTopBar = () =>{
   return(
     <MainTopBarContainer>
@@ -24,7 +25,7 @@ export const MainTopBar = () =>{
 export const DetailTopBar = ()=>{
   return(
     <DetailTopBarContainer>
-    <Image src={back} alt="뒤로가기" width={10.85} height={18.95}/>
+    <Link href="/"><Image src={back} alt="뒤로가기" width={10.85} height={18.95}/></Link>
     <Image src={bookmark} alt="북마크" width={16} height={20}/>
     </DetailTopBarContainer>
   )

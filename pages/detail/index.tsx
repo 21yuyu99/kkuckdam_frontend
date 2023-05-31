@@ -36,7 +36,7 @@ export default function Detail(){
     return(
         <>
         <DetailTopBar/>
-        <BookImgBox id={router.query.id as string}/>
+        <BookImgBox id={router..id as string}/>
         <BookInfoBox/>
         <BookHashTag/>
         <Summary/>

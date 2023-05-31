@@ -37,7 +37,7 @@ export const UserReadBookList = () => {
                     (book,index)=>
                     <div key={(index)}>
                     <Image src={book.img} alt = {book.alt} width={100} height={153}/>
-                    <span><Link href="/library/review">서평작성</Link></span>
+                    <span><Link href="/library/review?writing=true">서평작성</Link></span>
                     </div>
                 )}
             </ReadList>

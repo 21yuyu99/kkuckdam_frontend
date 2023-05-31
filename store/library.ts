@@ -8,5 +8,15 @@ export const toggleState = createSlice({
     }
   }
 });
+export const reviewText = createSlice({
+  name: "reviewText",
+  initialState : "",
+  reducers : {
+    setReviewText(state,action){
+      return state = action.payload
+    }
+  }
+})
 export const {changeToggleState} = toggleState.actions;
+export const {setReviewText} = reviewText.actions;
 export default toggleState.reducer
