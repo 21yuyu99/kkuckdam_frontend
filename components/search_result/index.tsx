@@ -1,5 +1,5 @@
 
-import { BookInfoContainer, BookPopularity, Bookname,Writer,Timer, BookBoxContainer, BookListContainer, BookMainInfoContainer, ReadingInfoContainer} from "./search_result.style"
+import { BookInfoContainer, BookPopularity, Bookname,Writer,Timer, BookBoxContainer, BookListContainer, ReadingInfoContainer} from "./search_result.style"
 import Image from 'next/image';
 import unnecessaryWorries from "@/public/img/book/unnecessaryWorries.jpeg"
 import selfManagement from "@/public/img/book/selfManagement.png"
