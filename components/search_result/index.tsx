@@ -4,7 +4,7 @@ import Image from 'next/image';
 import unnecessaryWorries from "@/public/img/book/unnecessaryWorries.jpeg"
 import selfManagement from "@/public/img/book/selfManagement.png"
 import putDownWorry from '@/public/img/book/putDownWorry.jpeg'
-import {AiFillStar} from "react-icons/Ai";
+import {AiFillStar} from "react-icons/ai";
 import {BsFillBookmarkFill} from "react-icons/bs";
 export const Result = () =>{
     const bookList = [
