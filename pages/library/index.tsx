@@ -1,6 +1,6 @@
 import { Main } from '@/styles/home.style'
 import { KkukBanner } from '@/components/library/kkuck'
-import {ToggleBtn} from '@/components/library/toggleBtn'
+import {ToggleBtn} from '@/components/library/toggle_btn'
 import {BookShelf, EmptyBookShelf} from '@/components/library/bookshelf'
 import {ReviewBanner} from '@/components/library/reviewbanner'
 import {UserReadBookList} from '@/components/library/readbook'

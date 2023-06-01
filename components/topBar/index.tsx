@@ -11,7 +11,9 @@ export const MainTopBar = () =>{
   return(
     <MainTopBarContainer>
       <LogoWrapper>
+      <Link href={"/"}>
       <Image src={Logo} alt="꾹담" width={36}/>
+      </Link>
       </LogoWrapper>
       <SearchBar/>
       <MainIconContainer>

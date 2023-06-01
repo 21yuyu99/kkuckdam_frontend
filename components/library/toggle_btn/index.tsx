@@ -1,6 +1,6 @@
 
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import { BtnWrapper, ToggleContainer} from "./toggleBtn.style"
+import { BtnWrapper, ToggleContainer} from "./toggle_btn.style"
 import { changeToggleState } from "@/store/library";
 
 export const ToggleBtn = () =>{
