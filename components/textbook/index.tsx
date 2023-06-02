@@ -8,35 +8,57 @@ import Kkuk4th from '@/public/img/library/character/4ndkkuk.png'
 
 const bookContent = [
     [
-        '현대의학의 아버지, 윌리엄 오슬러 경은 말했다.', <br/>,
-        '"친한 친구들은 제 두뇌가 평범하다는 사실을 잘 압니다" 그렇다면 그의 성공 비결은 무엇이었을까?'
+        { id : 1, text :
+        <p>
+            현대의학의 아버지, 윌리엄 오슬러 경은 말했다.<br/>
+            &ldquo;친한 친구들은 제 두뇌가 평범하다는 사실을 잘 압니다&rdquo; 그렇다면 그의 성공 비결은 무엇이었을까?
+        </p>
+        }
     ],
     [
-        "그는 자신이 '오늘의 삶'을 충실하게 살고 있기 때문이라고 설명했다."
+        { id : 1, text :
+        <p>
+            그는 자신이 &apos;오늘의 삶&apos;을 충실하게 살고 있기 때문이라고 설명했다.
+        </p>
+        }
     ],
     [
-        "내일을 위해 어떤 노력도 하지 말라고 충고하는 것일까?", <br/>,
-        "아니다."
+        { id : 1, text :
+        <p>
+            내일을 위해 어떤 노력도 하지 말라고 충고하는 것일까?<br/>
+            아니다.
+        </p>
+        }
     ],
     [
-        "내일을 맞는 최선의 방법은", <br/>,
-        <u>{"오늘 해야 할 일을 잘하는 데에 있다"}</u>, "고 강조한다.", <br/>,
-        "내일 일을 생각해야 한다.", <br/>,
-        "하지만 걱정해서는 안된다."
+        { id : 1, text : 
+        <p>
+            내일을 맞는 최선의 방법은<br/>
+            <u>오늘 해야 할 일을 잘하는 데에 있다</u>고 강조한다.<br/>
+            내일 일을 생각해야 한다.<br/>
+            하지만 걱정해서는 안된다.
+        </p>
+        }
     ],
     [
-        '"아무리 힘든일이라도 누구나 하루동안은 할 수 있다."', <br/>,
-        "-로버트 루이스 스티븐슨-", <br/>, <br/>, <br/>,
-        "Carpediem", <br/>,
-        "오늘을 즐기라. 오늘을 붙잡으라."
+        { id : 1, text :
+        <p>
+            &ldquo;아무리 힘든일이라도 누구나 하루동안은 할 수 있다.&rdquo;<br/>
+            -로버트 루이스 스티븐슨-<br/><br/><br/>
+            Carpediem<br/>
+            오늘을 즐기라. 오늘을 붙잡으라.
+        </p>
+        }
     ]
 ]
 
 export const ShowBook = (count:number) => {
+    const content = bookContent[count].map(item => (
+        <p key={item.id}>{item.text}</p>
+    ))
+    
     return (
-        <Content>
-            {bookContent[count]}
-        </Content>
+        <Content>{content}</Content>
     )
 }
 
