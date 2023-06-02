@@ -6,6 +6,7 @@ import livebook from "@/public/img/detail/livebook.png"
 import { useRouter } from "next/router";
 import { BookIndexWrapper, ForItemGap, ReadIconContainer, VideoWrapper } from "@/styles/detail.style";
 import Image from "next/image";
+import Link from "next/link";
 export default function Detail(){
     const router = useRouter();
     const onClickLiveBook = () =>{
@@ -20,6 +21,7 @@ export default function Detail(){
             } 
     }
 }
+
     if(typeof(document) !=="undefined"){
         document.addEventListener("fullscreenchange", () => {
             if(!document.fullscreenElement){
@@ -42,6 +44,7 @@ export default function Detail(){
         <Summary/>
         <ForItemGap>
             <ListContainer>
+                <Link href="/textbook">
                     <ItemContainer>
                         <ReadIconContainer img="textbook">
                             <IconWrapper color="yellow">
@@ -52,6 +55,7 @@ export default function Detail(){
                             텍스트북
                         </ItemTitle>
                     </ItemContainer>
+                </Link>
                 <ItemContainer onClick = {()=>onClickLiveBook()}>
                     <ReadIconContainer img = "livebook">
                         <IconWrapper color="yellow">
