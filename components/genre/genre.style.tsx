@@ -44,17 +44,17 @@ padding:0 15px;
 
 export const EndBar = styled.div<{color:string, font:string}>`
     position:fixed;
-    bottom:3%;
+    bottom:2%;
     z-index:999;
     width:33%;
-    height:8%;
+    height:7%;
 
     border-radius:57px;
     border:2px solid #F47873;
 
     font-family:Roboto;
-    font-weight:600;
-    font-size:1.1em;
+    font-weight:800;
+    font-size:1.2em;
     color:${props=>props.font};
     
     left:0;
@@ -106,7 +106,7 @@ export const SelectedOverlay = styled.div`
     position:absolute;
     border-radius:6px;
     width:110.2px;
-    height:131.1px;
+    height:169.5px;
     background-color:rgba(244, 120, 115, 0.7);
 
     display:flex;

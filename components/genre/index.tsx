@@ -7,7 +7,6 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setSearchText } from "@/store/search_result";
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 export const Genre = () => {
     const searchText = useAppSelector((state)=>state.searchText);
@@ -95,7 +94,7 @@ export const Genre = () => {
                 {
                     GenreList.map((genre, id) => (
                         <GenreWrapper key={id} onClick={()=>counting(id)}>
-                            <Image src={genre.image} alt="자기관리론" width={110.2} height={131.1}/>
+                            <Image src={genre.image} alt="자기관리론" width={110.2} height={169.5}/>
                             {
                                 selected[id]
                                 ?
