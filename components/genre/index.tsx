@@ -94,7 +94,7 @@ export const Genre = () => {
             <GenreContainer>
                 {
                     GenreList.map((genre, id) => (
-                        <GenreWrapper onClick={()=>counting(id)}>
+                        <GenreWrapper key={id} onClick={()=>counting(id)}>
                             <Image src={genre.image} alt="자기관리론" width={110.2} height={131.1}/>
                             {
                                 selected[id]
