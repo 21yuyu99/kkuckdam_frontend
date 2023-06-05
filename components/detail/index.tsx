@@ -1,5 +1,7 @@
 import Image from "next/image"
-import background from "@/public/img/detail/selfManagementBack.png"
+import self_manage_back from "@/public/img/detail/selfManagementBack.png"
+import market_studies_back from "@/public/img/detail/market_studies_back.png"
+import market_studies from "@/public/img/book/MarketOverview.png";
 import self from "@/public/img/book/selfManagement.png"
 import bookMark from "@/public/img/detail/bookMark.png"
 import star from "@/public/img/detail/star.png"
@@ -9,65 +11,91 @@ import { BookContainer,BookWrapper, BackWrapper, BookInfoContainer, BookTitle, T
 import { changeSummaryState } from "@/store/detail"
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { useState } from "react"
+import { useRouter } from "next/router";
 export const BookImgBox = (id:{id:string}) => {
+    const bookList = [
+        {
+            back : self_manage_back,
+            book : self
+        },
+        {
+            back : market_studies_back,
+            book : market_studies
+        }
+    ]
     return(
         <BookContainer>
             <BackWrapper>
-                <Image src={background} alt=""/>
+                {id.id!="2"?
+                <Image src={bookList[0].back} alt=""/>
+            :
+            <Image src={bookList[1].back} alt=""/>}
             </BackWrapper>
             <BookWrapper>
-                <Image src={self} alt=""/>
+            {id.id!="2"?
+                <Image src={bookList[0].book} alt=""/>
+            :
+            <Image src={bookList[1].book} alt=""/>}
             </BookWrapper>
         </BookContainer>
     )
 }
 
-export const BookInfoBox = ()=>{
+export const BookInfoBox = (id:{id:string})=>{
     return(
     <>
         <BookInfoContainer>
             <InfoLeftContainer>
                 <BookTitle>
-                    데일 카네기 자기 관리론
+                    {id.id!="2"?"데일 카네기 자기 관리론": "시장학개론"}
                 </BookTitle>
                 <BookWriter>
-                    데일 카네기(지은이), 임상훈(옮긴이)
+                    {id.id!="2"?"데일 카네기(지은이), 임상훈(옮긴이)": "김승호"}
                 </BookWriter>
             </InfoLeftContainer>
             <InfoRightContaienr>
                 <Tag color="red">
-                    자기계발
+                    {id.id!="2"?"자기계발":"경제/경영"}
                 </Tag>
             </InfoRightContaienr>
         </BookInfoContainer>
         <ReadingInfoContainer>
             <IconWrapper>
              <Image src={bookMark} alt="bookmark"/>
-                <p>50</p>
+                <p>{id.id!="2"?50:33}</p>
             <Image src={star} alt="bookmark"/>
-                <p>41</p>
+                <p>{id.id!="2"?41:43}</p>
             </IconWrapper>
             <ReadingTime>
-                완독 소요 시간 15분
+                완독 소요 시간 {id.id!="2"?15:20}분
             </ReadingTime>
         </ReadingInfoContainer> 
     </>
     )
 }
 
-export const BookHashTag = () => {
+export const BookHashTag = (id:{id:string}) => {
+    const tag1 = [
+        "힘든 일이 한번에 닥칠 때","논픽션","베스트셀러","고전","워런 버핏 Pick","걱정 해소법"
+    ]
+    const tag2 = [
+       "유능한 리더","성공 기업", "경영수업", "기업가 철학", "논픽션", "경영 철학"
+    ]
     return(
         <HashTagContainer>
-        <Tag>힘든 일이 한번에 닥칠 때</Tag>
-        <Tag>논픽션</Tag>
-        <Tag>베스트셀러</Tag>
-        <Tag>고전</Tag>
-        <Tag>워런 버핏 Pick</Tag>
-        <Tag>걱정 해소법</Tag>
+            {id.id !=="2"?
+            tag1.map((tag,idx)=>
+             <Tag key={idx}>{tag}</Tag>
+            )
+            :
+            tag2.map((tag,idx)=>
+             <Tag key={idx}>{tag}</Tag>
+            )
+            }
         </HashTagContainer>
     )
 }
-export const Summary = () =>{
+export const Summary = (id:{id:string}) =>{
     const summaryState:boolean = useAppSelector((state) => state.readSummary);
     const dispatch = useAppDispatch();
     const onClick = ()=>{
@@ -79,7 +107,10 @@ export const Summary = () =>{
                 내용요약
             </SummaryTitle>
             <SummaryContent>
-            베스트셀러 『인간관계론』 저자인 데일 카네기는 성인들에게 화술과 인간관계를 가르치는 동안 ‘걱정’이 모든 인생 문제의 주원인이자 자기관리의 핵심 요소임을 깨달았다. 그래서 ‘걱정을 멈추고 새로운 인생을 사는 법’을 교육하기로 마음먹었다. 하지만 문제가 생겼다. 교과서로 삼기에 적합한 책을 찾을 수 없었던 것이다. 결국 직접 쓸 수밖에 없었다. 이것이 또 한 권의 세계적인 베스트셀러가 탄생하게 된 배경이다.
+                {id.id!=="2"?
+                "베스트셀러 『인간관계론』 저자인 데일 카네기는 성인들에게 화술과 인간관계를 가르치는 동안 ‘걱정’이 모든 인생 문제의 주원인이자 자기관리의 핵심 요소임을 깨달았다. 그래서 ‘걱정을 멈추고 새로운 인생을 사는 법’을 교육하기로 마음먹었다. 하지만 문제가 생겼다. 교과서로 삼기에 적합한 책을 찾을 수 없었던 것이다. 결국 직접 쓸 수밖에 없었다. 이것이 또 한 권의 세계적인 베스트셀러가 탄생하게 된 배경이다."
+                :
+                "이 책은 한국과 미국, 전 세계를 오가며 ‘사장을 가르치는 사장’으로 알려진 『돈의 속성』의 저자 김승호 회장의 신간이다. 평생 사장으로 살아온 그의 경영철학 모두를 10여 년에 걸쳐 정리해 온 그는, 이번 『사장학개론』 책을 통해 120가지 주제로 그 내용을 모두 담아 완성했다. 지난 7년간 3천 명의 사장 제자들을 만나 [사장학 수업]을 진행하며 현실에서 겪는 다양한 문제에 대해, 사장들이 묻는 공통적인 어려움이 존재했으며 그 문제들을 목차로 구성해 방향제시를 더했다."}
             </SummaryContent>
             <SummaryFullBtn onClick={onClick}>
                 {summaryState==false?<Image src={down} alt="자세히 보기" width={20} height={13}/>:<Image src={up} alt="닫기" width={20} height={13}/>}
@@ -87,7 +118,8 @@ export const Summary = () =>{
         </SummaryContainer>
     )
 }
-export const BookIndex = () => {
+export const BookIndex = (id:{id:string}) => {
+    const router = useRouter();
     interface indexContentType{
         num : string,
         content : string
@@ -98,7 +130,8 @@ export const BookIndex = () => {
         open : boolean,
         content : indexContentType[]
     }
-    const bookIndexList:bookIndexType[] = [
+    const bookIndexList:bookIndexType[][] = [
+    [
         {
             num : "1부",
             title : "걱정에 대해 알아야 할 기본 지식",
@@ -293,24 +326,119 @@ export const BookIndex = () => {
                 }
             ]
         }
+    ],
+    [
+        {
+            num : "1부",
+            title : "나는 장사를 하는가? 사업을 하는가?",
+            open : false,
+            content : [
+                {
+                    num : "",
+                    content : ""
+                }
+            ]
+        },
+        {
+            num : "2부",
+            title : "수업의 4가지 경로",
+            open : false,
+            content : [
+                {
+                    num : "",
+                    content : ""
+                }
+            ]
+        },
+        {
+            num : "3부",
+            title : "당신 사업의 PER는 얼마인가?",
+            open : false,
+            content : [
+                {
+                    num : "",
+                    content : ""
+                }
+            ]
+        },
+        {
+            num : "4부",
+            title : "명령, 지시를 정확하게 하라",
+            open : false,
+            content : [
+                {
+                    num : "",
+                    content : ""
+                }
+            ]
+        },
+        {
+            num : "5부",
+            title : "나쁜 지시와 올바른 지시",
+            open : false,
+            content : [
+                {
+                    num : "",
+                    content : ""
+                }
+            ]
+        },
+        {
+            num : "6부",
+            title : "매출이 오르면 사람을 쓸까? 사람을 써서 매출을 올릴까?",
+            open : false,
+            content : [
+                {
+                    num : "",
+                    content : ""
+                }
+            ]
+        }
     ]
-    const [indexList,setIndex] = useState<bookIndexType[]>(bookIndexList);
-    const onClickHandler = (idx:number)=>{
-        indexList[idx].open = !indexList[idx].open;
+]   
+    let [indexList,setIndex] = useState<bookIndexType[][]>(bookIndexList);
+        
+    const onClickHandler = (id:number,idx:number)=>{
+        indexList[id][idx].open = !indexList[id][idx].open;
         setIndex([...indexList]);
     }
     return(
         <>
         <GrayLine/>
-        {
-            indexList.map((index,key)=>
+        { id.id!=="2"?
+            indexList[0].map((index,key)=>
                 {
                     return(
                             <>
                             <BookIndexContainer key={key}>
                             <IndexNum>{index.num}</IndexNum>
                             <IndexTitle>{index.title}</IndexTitle>
-                            <IndexBtnWrapper onClick={()=> onClickHandler(indexList.indexOf(index))}>
+                            <IndexBtnWrapper onClick={()=> onClickHandler(0,indexList[0].indexOf(index))}>
+                                {index.open==false?<Image src={down} alt="자세히 보기" width={20} height={13}/>:<Image src={up} alt="닫기" width={20} height={13}/>}
+                            </IndexBtnWrapper>
+                            </BookIndexContainer>
+                            {index.open==false?<></>:<>{
+                                index.content.map(
+                                    (detail,idx)=>
+                                    <DetailIndexContainer key={idx}>
+                                        <DetailIndexLeftWrapper/>
+                                        <DetailIndexWrapper>{detail.num}&nbsp;&nbsp;{detail.content}</DetailIndexWrapper>
+                                        <DetailIndexRightWrapper/>
+                                    </DetailIndexContainer>
+                                )
+                            }</>}
+                            </>
+                    )
+                }
+                ):
+                indexList[1].map((index,key)=>
+                {
+                    return(
+                            <>
+                            <BookIndexContainer key={key}>
+                            <IndexNum>{index.num}</IndexNum>
+                            <IndexTitle>{index.title}</IndexTitle>
+                            <IndexBtnWrapper onClick={()=> onClickHandler(1,indexList[1].indexOf(index))}>
                                 {index.open==false?<Image src={down} alt="자세히 보기" width={20} height={13}/>:<Image src={up} alt="닫기" width={20} height={13}/>}
                             </IndexBtnWrapper>
                             </BookIndexContainer>

@@ -39,9 +39,9 @@ export default function Detail(){
         <>
         <DetailTopBar/>
         <BookImgBox id={router.query.id as string}/>
-        <BookInfoBox/>
-        <BookHashTag/>
-        <Summary/>
+        <BookInfoBox id={router.query.id as string}/>
+        <BookHashTag id={router.query.id as string}/>
+        <Summary id={router.query.id as string}/>
         <ForItemGap>
             <ListContainer>
                 <Link href="/textbook">
@@ -69,10 +69,10 @@ export default function Detail(){
             </ListContainer>
         </ForItemGap>
         <BookIndexWrapper>
-            <BookIndex/>
+            <BookIndex id={router.query.id as string}/>
         </BookIndexWrapper>
         <VideoWrapper id="videoWrapper">
-         <video id = "video" src="/video/selfManagement.mp4" controls/>
+            {router.query.id !=="2"?<video id = "video" src="/video/selfManagement.mp4" controls/>:<video id = "video" src="/video/market_studies.mp4" controls/>}
         </VideoWrapper>
         </>
     )
