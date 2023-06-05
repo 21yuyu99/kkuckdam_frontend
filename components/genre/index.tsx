@@ -1,8 +1,18 @@
 import { Text, Container, BarBox, GlassesWrapper, EndBar, GenreContainer, GenreWrapper, GenreName, SelectedOverlay } from "./genre.style"
 import Image from "next/image"
-import SelfManagement from "@/public/img/book/selfManagement.png"
 import Glasses from '@/public/img/topBar/glasses.png'
 import Check from '@/public/img/genre/check.png'
+
+import EconomicRecipe from "@/public/img/book/economicRecipe.png"
+import UltraProfit from "@/public/img/book/ultra-profit.png"
+import Justice from "@/public/img/book/whatisJustice.png"
+import SelfManagement from "@/public/img/book/selfManagement.png"
+import NatureOfMoney from "@/public/img/book/natureOfMoney.png"
+import Gunjuron from "@/public/img/book/gunjuron.png"
+import Cosmos from "@/public/img/book/cosmos.png"
+import NowInsideMe from "@/public/img/book/nowInsideMe.png"
+import Refinement from "@/public/img/book/refinement.png"
+
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setSearchText } from "@/store/search_result";
 import { useState } from 'react'
@@ -13,50 +23,41 @@ export const Genre = () => {
     const dispatch = useAppDispatch();
 
     const GenreList = [
-        // 각 장르별 이미지 나오면 그걸로 바꿔주기
         {
-            image:SelfManagement,
+            image:EconomicRecipe,
             name:"경제"
         },
         {
-            image:SelfManagement,
-            name:"경제"
+            image:UltraProfit,
+            name:"투자"
+        },
+        {
+            image:Justice,
+            name:"인문"
         },
         {
             image:SelfManagement,
-            name:"경제"
+            name:"자기계발"
         },
         {
-            image:SelfManagement,
-            name:"경제"
+            image:NatureOfMoney,
+            name:"금융"
         },
         {
-            image:SelfManagement,
-            name:"경제"
+            image:Gunjuron,
+            name:"사회"
         },
         {
-            image:SelfManagement,
-            name:"경제"
+            image:Cosmos,
+            name:"과학"
         },
         {
-            image:SelfManagement,
-            name:"경제"
+            image:NowInsideMe,
+            name:"에세이"
         },
         {
-            image:SelfManagement,
-            name:"경제"
-        },
-        {
-            image:SelfManagement,
-            name:"경제"
-        },
-        {
-            image:SelfManagement,
-            name:"경제"
-        },
-        {
-            image:SelfManagement,
-            name:"경제"
+            image:Refinement,
+            name:"교양"
         }
     ];
 
