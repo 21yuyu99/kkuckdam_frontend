@@ -16,7 +16,7 @@ export const BottomBar = () =>{
     dispatch(changeBottomState(selected));
     switch(selected){
       case "home":
-        return router.push('/');
+        return router.push('/mainpage');
       case "library":
         return router.push('/library');
     }

@@ -77,7 +77,7 @@ export const Genre = () => {
 
     const router = useRouter();
     const toMain = () => {
-        router.push({ pathname : '/' })
+        router.push({ pathname : '/mainpage' })
     }
 
 

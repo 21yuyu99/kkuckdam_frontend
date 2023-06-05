@@ -11,7 +11,7 @@ export const MainTopBar = () =>{
   return(
     <MainTopBarContainer>
       <LogoWrapper>
-      <Link href={"/"}>
+      <Link href={"/mainpage"}>
       <Image src={Logo} alt="꾹담" width={36}/>
       </Link>
       </LogoWrapper>
@@ -27,7 +27,7 @@ export const MainTopBar = () =>{
 export const DetailTopBar = ()=>{
   return(
     <DetailTopBarContainer>
-    <Link href="/"><Image src={back} alt="뒤로가기" width={10.85} height={18.95}/></Link>
+    <Link href="/mainpage"><Image src={back} alt="뒤로가기" width={10.85} height={18.95}/></Link>
     <Image src={bookmark} alt="북마크" width={16} height={20}/>
     </DetailTopBarContainer>
   )
