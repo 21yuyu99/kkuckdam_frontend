@@ -10,7 +10,7 @@ import down from "@/public/img/detail/down.png"
 import { BookContainer,BookWrapper, BackWrapper, BookInfoContainer, BookTitle, Tag, BookWriter, IconWrapper, InfoLeftContainer, ReadingTime, InfoRightContaienr, ReadingInfoContainer, HashTagContainer, SummaryContainer, SummaryTitle, SummaryContent, SummaryFullBtn, BookIndexContainer, GrayLine, IndexNum, IndexTitle, IndexBtnWrapper, DetailIndexWrapper, DetailIndexContainer, DetailIndexLeftWrapper, DetailIndexRightWrapper} from "./detail.style"
 import { changeSummaryState } from "@/store/detail"
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
-import { useEffect, useReducer, useState } from "react"
+import { useState } from "react"
 import { useRouter } from "next/router";
 export const BookImgBox = (id:{id:string}) => {
     const bookList = [

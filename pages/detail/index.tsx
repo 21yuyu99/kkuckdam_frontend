@@ -68,7 +68,7 @@ export default function Detail(){
             <BookIndex id={router.query.id as string}/>
         </BookIndexWrapper>
         <VideoWrapper id="videoWrapper">
-         <video id = "video" src="/video/selfManagement.mp4" controls/>
+            {router.query.id !=="2"?<video id = "video" src="/video/selfManagement.mp4" controls/>:<video id = "video" src="/video/market_studies.mp4" controls/>}
         </VideoWrapper>
         </>
     )
